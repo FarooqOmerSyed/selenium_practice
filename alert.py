@@ -7,7 +7,7 @@ url = "https://www.selenium.dev/documentation/webdriver/interactions/alerts/"
 
 
 def test_alert_popup():
-    driver = webdriver.Chrome()
+    driver = webdriver.Firefox()
     driver.get(url)
     element = driver.find_element(By.LINK_TEXT, "See an example alert")
     element.click()
@@ -17,5 +17,9 @@ def test_alert_popup():
     text = alert.text
     alert.accept()
     assert text == "Sample alert"
+    print('the test has been passed!!')
 
     driver.quit()
+
+if __name__ == '__main__':
+    test_alert_popup()
