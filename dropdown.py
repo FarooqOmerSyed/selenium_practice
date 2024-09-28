@@ -17,7 +17,7 @@ def driver():
 
 @pytest.mark.usefixtures('driver')
 def test_dropdown(driver):
-    wait = WebDriverWait(driver, 10)
+    wait = WebDriverWait(driver, 6)
     
     dropdown = wait.until(EC.presence_of_element_located((By.ID, 'country')))
     dropdown2 = wait.until(EC.presence_of_element_located((By.ID, 'Gender')))
@@ -30,10 +30,7 @@ def test_dropdown(driver):
     
     time.sleep(2)
     
-    button = wait.until(EC.element_to_be_clickable((By.XPATH, '''/html/body/div[1]/div[1]/section[1]/div/div/div/div/div/div[2]/section/div/div/div/div/div/form/div/div/div/div[3]/a''')))
+    button = wait.until(EC.element_to_be_clickable((By.XPATH, '''//form//a[3]''')))
     button.click()
     
-    selected_option = select.first_selected_option.text
-    selected_option2 = select2.first_selected_option.text
-
-    print(f'{selected_option} and {selected_option2} have been selected!')
+   
