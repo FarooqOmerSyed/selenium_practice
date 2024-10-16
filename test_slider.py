@@ -10,7 +10,7 @@ driver = webdriver.Firefox()
 # Open the webpage
 driver.get("https://testautomationpractice.blogspot.com/")  
 driver.maximize_window()
-time.sleep(11)
+time.sleep(6)
 
 # Locate the slider handle element
 slider_handle = driver.find_element(By.XPATH, '''/html/body/div[4]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/div[4]/div[3]/div/aside/div/div[8]/div[1]/div/span''')
